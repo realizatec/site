@@ -4,91 +4,130 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Realiza Tec - Soluções em Tecnologia</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
-    body {
-    font-family: Arial, sans-serif;
-    color: #333;
-    margin: 0;
-    padding: 0;
+    /* Ajustes para a aparência */
+    h1, h2 {
+    font-weight: bold;
     }
 
-    header {
-    background-color: #4CAF50;
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
+    .card {
+    border: none;
+    transition: transform 0.3s;
     }
 
-    header h1 {
-    margin: 0;
+    .card:hover {
+    transform: scale(1.05);
     }
 
-    header nav a {
-    color: #fff;
-    margin: 0 1rem;
-    text-decoration: none;
+    #sobre img {
+    margin-top: 1rem;
     }
 
-    main {
-    padding: 2rem;
+    #contato p {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
     }
 
-    h2 {
-    color: #4CAF50;
-    }
-
-    footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    }
-
-</style>
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Realiza Tec</h1>
-    <p>Transformando ideias em realidade</p>
-    <nav>
-      <a href="#sobre">Sobre Nós</a>
-      <a href="#servicos">Serviços</a>
-      <a href="#contato">Contato</a>
-    </nav>
+  <!-- Header -->
+  <header class="bg-primary text-white text-center py-5">
+    <div class="container">
+      <h1 class="display-4">Realiza Tec</h1>
+      <p class="lead">Transformando ideias em realidade com tecnologia de ponta</p>
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a href="#sobre" class="nav-link">Sobre Nós</a></li>
+          <li class="nav-item"><a href="#servicos" class="nav-link">Serviços</a></li>
+          <li class="nav-item"><a href="#contato" class="nav-link">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section id="sobre">
-      <h2>Sobre Nós</h2>
-      <p>A Realiza Tec é uma empresa inovadora dedicada ao desenvolvimento de tecnologias avançadas. Nossa missão é transformar ideias em soluções práticas e funcionais, abrangendo sites, jogos, aplicativos, software, automação, inteligência artificial, robótica e muito mais.</p>
-    </section>
+  <!-- Sobre Nós -->
+  <section id="sobre" class="py-5">
+    <div class="container text-center">
+      <h2 class="mb-4">Sobre Nós</h2>
+      <p class="text-muted">A Realiza Tec é uma empresa dedicada a soluções inovadoras e tecnológicas. Com uma equipe experiente, criamos projetos que transformam o futuro em realidade, abrangendo desde desenvolvimento de sites até robótica e inteligência artificial.</p>
+      <img src="https://via.placeholder.com/800x400" class="img-fluid rounded" alt="Sobre Realiza Tec">
+    </div>
+  </section>
 
-    <section id="servicos">
-      <h2>Serviços</h2>
-      <ul>
-        <li><strong>Desenvolvimento de Sites:</strong> Sites responsivos e otimizados para todos os dispositivos.</li>
-        <li><strong>Criação de Jogos:</strong> Experiências interativas para diversas plataformas.</li>
-        <li><strong>Aplicativos:</strong> Soluções para mobile e desktop.</li>
-        <li><strong>Automação:</strong> Sistemas automatizados para otimizar processos.</li>
-        <li><strong>Inteligência Artificial:</strong> Modelos personalizados para resolver problemas complexos.</li>
-        <li><strong>Robótica:</strong> Soluções inovadoras e protótipos de robôs.</li>
-      </ul>
-    </section>
+  <!-- Serviços -->
+  <section id="servicos" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-5">Nossos Serviços</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Desenvolvimento de Sites">
+            <div class="card-body">
+              <h5 class="card-title">Desenvolvimento de Sites</h5>
+              <p class="card-text">Criamos sites responsivos e otimizados para todas as plataformas.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Criação de Jogos">
+            <div class="card-body">
+              <h5 class="card-title">Criação de Jogos</h5>
+              <p class="card-text">Desenvolvemos jogos interativos e imersivos para diversas plataformas.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Automação">
+            <div class="card-body">
+              <h5 class="card-title">Automação</h5>
+              <p class="card-text">Projetos de automação para otimizar processos e aumentar a eficiência.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Inteligência Artificial">
+            <div class="card-body">
+              <h5 class="card-title">Inteligência Artificial</h5>
+              <p class="card-text">Desenvolvemos modelos de IA para resolver problemas complexos.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Robótica">
+            <div class="card-body">
+              <h5 class="card-title">Robótica</h5>
+              <p class="card-text">Prototipagem e desenvolvimento de soluções robóticas inovadoras.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section id="contato">
-      <h2>Contato</h2>
-      <p>Entre em contato conosco para saber mais sobre como podemos ajudar seu projeto a se tornar realidade.</p>
-      <p>Email: contato@realizatec.com.br</p>
-      <p>Telefone: (XX) XXXXX-XXXX</p>
-    </section>
-  </main>
+  <!-- Contato -->
+  <section id="contato" class="py-5 text-center">
+    <div class="container">
+      <h2 class="mb-4">Fale Conosco</h2>
+      <p class="text-muted">Entre em contato para saber mais sobre nossos serviços e soluções personalizadas.</p>
+      <p><strong>Email:</strong> contato@realizatec.com.br</p>
+      <p><strong>Telefone:</strong> (XX) XXXXX-XXXX</p>
+    </div>
+  </section>
 
-  <footer>
-    <p>&copy; 2024 Realiza Tec. Todos os direitos reservados.</p>
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p class="mb-0">&copy; 2024 Realiza Tec. Todos os direitos reservados.</p>
   </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
