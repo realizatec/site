@@ -10,38 +10,38 @@
   <style>
     /* Ajustes para a aparência */
     h1, h2 {
-    font-weight: bold;
+        font-weight: bold;
     }
 
     /* Ajustes para a aparência */
     body {
-      font-family: 'Open Sans', sans-serif; /* Aplica a fonte Roboto a todo o site */
+        font-family: 'Open Sans', sans-serif; /* Aplica a fonte Roboto a todo o site */
     }
 
     /* Adicionando imagem de fundo ao header */
     header {
-    background-image: url('https://cdn.leonardo.ai/users/3aa9f85e-4ba0-41b8-81a0-2a3cd3a29688/generations/0a7a2a97-44b8-4411-8513-b04552ceb1cf/Leonardo_Phoenix_A_mesmerizing_futuristic_digital_artwork_feat_0.jpg'); /* Coloque a URL da sua imagem aqui */
-    background-size: cover;
-    background-position: center;
-    color: white;
-    height: 100vh; /* Altura do header para 100% da altura da tela */
-    display: flex; /* Ativa o flexbox */
-    align-items: center; /* Centraliza verticalmente */
-    justify-content: center; /* Centraliza horizontalmente */
-    text-align: center; /* Centraliza o texto */
+        background-image: url('https://cdn.leonardo.ai/users/3aa9f85e-4ba0-41b8-81a0-2a3cd3a29688/generations/0a7a2a97-44b8-4411-8513-b04552ceb1cf/Leonardo_Phoenix_A_mesmerizing_futuristic_digital_artwork_feat_0.jpg'); /* Coloque a URL da sua imagem aqui */
+        background-size: cover;
+        background-position: center;
+        color: white;
+        height: 100vh; /* Altura do header para 100% da altura da tela */
+        display: flex; /* Ativa o flexbox */
+        align-items: center; /* Centraliza verticalmente */
+        justify-content: center; /* Centraliza horizontalmente */
+        text-align: center; /* Centraliza o texto */
     }
 
     #sobre {
-    position: relative; /* Necessário para o pseudo-elemento */
-    background-image: url('https://cdn.leonardo.ai/users/3aa9f85e-4ba0-41b8-81a0-2a3cd3a29688/generations/58348832-7c3f-4d4d-8e15-064a4ba1487c/Leonardo_Phoenix_A_futuristic_company_background_with_sleek_mo_1.jpg');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    height: 100vh;
-    display: flex; /* Ativa o flexbox */
-    align-items: center; /* Centraliza verticalmente */
-    justify-content: center; /* Centraliza horizontalmente */
-    text-align: center; /* Centraliza o texto */
+        position: relative; /* Necessário para o pseudo-elemento */
+        background-image: url('https://cdn.leonardo.ai/users/3aa9f85e-4ba0-41b8-81a0-2a3cd3a29688/generations/58348832-7c3f-4d4d-8e15-064a4ba1487c/Leonardo_Phoenix_A_futuristic_company_background_with_sleek_mo_1.jpg');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        height: 100vh;
+        display: flex; /* Ativa o flexbox */
+        align-items: center; /* Centraliza verticalmente */
+        justify-content: center; /* Centraliza horizontalmente */
+        text-align: center; /* Centraliza o texto */
     }
 
     #sobre::before {
@@ -61,14 +61,14 @@
     }
 
     header::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6); /* Adicione a cor e a opacidade desejadas */
-    z-index: 1; /* Coloca a camada de cor acima da imagem de fundo */
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.6); /* Adicione a cor e a opacidade desejadas */
+        z-index: 1; /* Coloca a camada de cor acima da imagem de fundo */
     }
 
     header h1, header p, #sobre h2, #sobre p {
@@ -77,29 +77,35 @@
     }
 
     .card {
-    border: none;
-    transition: transform 0.3s;
-    border: 2px solid #ccc; /* Define a cor e a largura da borda */
-    border-radius: 5px; /* Arredonda os cantos da borda */
+        border: none;
+        transition: transform 0.3s;
+        border: 2px solid #ccc; /* Define a cor e a largura da borda */
+        border-radius: 5px; /* Arredonda os cantos da borda */
     }
 
     .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        transform: scale(1.05);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     }
 
     .card-img-top {
-    height: 200px; /* Defina a altura desejada */
-    object-fit: cover; /* Ajusta a imagem para cobrir o espaço definido */
+        height: 200px; /* Defina a altura desejada */
+        object-fit: cover; /* Ajusta a imagem para cobrir o espaço definido */
     }
 
     #sobre img {
-    margin-top: 1rem;
+        margin-top: 1rem;
     }
 
     #contato p {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    #box-form {
+        height: 600px;
+        overflow: hidden;
+        margin-top: -100px;
     }
 
   </style>
@@ -190,10 +196,31 @@
   <!-- Contato -->
   <section id="contato" class="py-5 text-center">
     <div class="container">
-      <h2 class="mb-4">Fale Conosco</h2>
-      <p class="text-muted">Entre em contato para saber mais sobre nossos serviços e soluções personalizadas:</p>
-      <p><i class="fa-regular fa-envelope"></i> <strong>tec.realiza@gmail.com</strong></p>
-      <p><i class="fa-solid fa-phone"></i> <strong>+55 21 998275745</strong></p>
+
+        <h3 class="mb-4"><i class="fa-regular fa-comments"></i> Fale Conosco</h3>
+
+        <div id="box-form">
+            <iframe
+            id="JotFormIFrame-243095906057057"
+            title="RealizaTec"
+            onload="window.parent.scrollTo(0,0)"
+            allowtransparency="true"
+            allow="geolocation; microphone; camera; fullscreen"
+            src="https://form.jotform.com/243095906057057"
+            frameborder="0"
+            style="min-width:100%;max-width:100%;height:539px;border:none;"
+            scrolling="no"
+            >
+            </iframe>  
+            <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
+            <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-243095906057057']", "https://form.jotform.com/")</script>
+        
+        </div>
+
+        <p class="text-muted">Entre em contato para saber mais sobre nossos serviços e soluções personalizadas:</p>
+        <p><i class="fa-regular fa-envelope"></i> <strong>tec.realiza@gmail.com</strong></p>
+        <p><i class="fa-solid fa-phone"></i> <strong>+55 21 998275745</strong></p>
+
     </div>
   </section>
 
@@ -201,8 +228,6 @@
   <footer class="bg-dark text-white text-center py-3">
     <p class="mb-0">&copy; 2024 Realiza Tec. Todos os direitos reservados.</p>
   </footer>
-
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" defer></script>
   
 </body>
 </html>
