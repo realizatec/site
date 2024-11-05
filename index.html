@@ -5,19 +5,92 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Realiza Tec - Soluções em Tecnologia</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"> <!-- CDN da fonte Open Sans -->
   <style>
     /* Ajustes para a aparência */
     h1, h2 {
     font-weight: bold;
     }
 
+    /* Ajustes para a aparência */
+    body {
+      font-family: 'Open Sans', sans-serif; /* Aplica a fonte Roboto a todo o site */
+    }
+
+    /* Adicionando imagem de fundo ao header */
+    header {
+    background-image: url('https://cdn.leonardo.ai/users/3aa9f85e-4ba0-41b8-81a0-2a3cd3a29688/generations/0a7a2a97-44b8-4411-8513-b04552ceb1cf/Leonardo_Phoenix_A_mesmerizing_futuristic_digital_artwork_feat_0.jpg'); /* Coloque a URL da sua imagem aqui */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 100vh; /* Altura do header para 100% da altura da tela */
+    display: flex; /* Ativa o flexbox */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    text-align: center; /* Centraliza o texto */
+    }
+
+    #sobre {
+    position: relative; /* Necessário para o pseudo-elemento */
+    background-image: url('https://cdn.leonardo.ai/users/3aa9f85e-4ba0-41b8-81a0-2a3cd3a29688/generations/58348832-7c3f-4d4d-8e15-064a4ba1487c/Leonardo_Phoenix_A_futuristic_company_background_with_sleek_mo_1.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 100vh;
+    display: flex; /* Ativa o flexbox */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    text-align: center; /* Centraliza o texto */
+    }
+
+    #sobre::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.8); /* Cor com opacidade */
+        z-index: 1; /* Coloca a camada de cor acima da imagem de fundo */
+    }
+
+    #sobre h2, #sobre p {
+        position: relative; /* Faz com que o texto fique acima do pseudo-elemento */
+        z-index: 2; /* Coloca o texto acima da camada de cor */
+    }
+
+    header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Adicione a cor e a opacidade desejadas */
+    z-index: 1; /* Coloca a camada de cor acima da imagem de fundo */
+    }
+
+    header h1, header p, #sobre h2, #sobre p {
+        position: relative !important; /* Faz com que o texto fique acima do pseudo-elemento */
+        z-index: 2; /* Coloca o texto acima da camada de cor */
+    }
+
     .card {
     border: none;
     transition: transform 0.3s;
+    border: 2px solid #ccc; /* Define a cor e a largura da borda */
+    border-radius: 5px; /* Arredonda os cantos da borda */
     }
 
     .card:hover {
     transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-img-top {
+    height: 200px; /* Defina a altura desejada */
+    object-fit: cover; /* Ajusta a imagem para cobrir o espaço definido */
     }
 
     #sobre img {
@@ -33,82 +106,84 @@
 </head>
 <body>
   <!-- Header -->
-  <header class="bg-primary text-white text-center py-5">
+  <header class="text-white text-center py-5">
     <div class="container">
       <h1 class="display-4">Realiza Tec</h1>
-      <p class="lead">Transformando ideias em realidade com tecnologia de ponta</p>
-      <nav class="navbar navbar-expand-lg navbar-dark">
-        <ul class="navbar-nav mx-auto">
-          <li class="nav-item"><a href="#sobre" class="nav-link">Sobre Nós</a></li>
-          <li class="nav-item"><a href="#servicos" class="nav-link">Serviços</a></li>
-          <li class="nav-item"><a href="#contato" class="nav-link">Contato</a></li>
-        </ul>
-      </nav>
+      <p class="lead">Transformando ideias em realidade.</p>
+      <h1 class="display-4"><i class="fa-solid fa-arrow-down"></i></h1>
     </div>
   </header>
+<!-- Serviços -->
+<section id="servicos" class="py-5 bg-light">
+    <div class="container">
+        <h1 class="text-center display-4">Serviços</h1>
+        <br><br>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="https://damassets.autodesk.net/content/dam/autodesk/images/industry/media-entertainment/game-design-and-development/game-design-development-benefits-blazing-fast-performance-1280x720-nc.jpg" class="card-img-top" alt="Criação de Jogos">
+                    <div class="card-body">
+                        <h5 class="card-title">Criação de Jogos</h5>
+                        <p class="card-text">Desenvolvemos jogos interativos e imersivos para diversas plataformas.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="https://webkul.com/wp-content/uploads/2020/09/mobile-app-development-1.jpg" class="card-img-top" alt="Desenvolvimento de Aplicativos">
+                    <div class="card-body">
+                        <h5 class="card-title">Desenvolvimento de Aplicativos</h5>
+                        <p class="card-text">Criamos Apps personalizados, atendendo às suas necessidades.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="https://www.devopsinstitute.com/wp-content/uploads/2021/05/iStock-1277731016-scaled.jpg" class="card-img-top" alt="Inteligência Artificial">
+                    <div class="card-body">
+                        <h5 class="card-title">Inteligência Artificial</h5>
+                        <p class="card-text">Desenvolvemos modelos de IA para resolver problemas complexos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="https://maludesign.vn/wp-content/uploads/2022/03/landing-page-800x440.png.webp" class="card-img-top" alt="Desenvolvimento de Sites">
+                    <div class="card-body">
+                        <h5 class="card-title">Desenvolvimento de Sites</h5>
+                        <p class="card-text">Criamos sites responsivos e otimizados para todas as plataformas.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="https://miro.medium.com/v2/resize:fit:1400/1*HyaorPOiVy3-ja_U541ZJQ.png" class="card-img-top" alt="Automação">
+                    <div class="card-body">
+                        <h5 class="card-title">Automação</h5>
+                        <p class="card-text">Projetos de automação para otimizar processos e aumentar a eficiência.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="https://howtomechatronics.com/wp-content/uploads/2022/02/Arduino-Mega-Board-and-various-sensors-and-module.jpg" class="card-img-top" alt="Robótica">
+                    <div class="card-body">
+                        <h5 class="card-title">Robótica</h5>
+                        <p class="card-text">Prototipagem e desenvolvimento de soluções robóticas inovadoras.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
   <!-- Sobre Nós -->
   <section id="sobre" class="py-5">
     <div class="container text-center">
-      <h2 class="mb-4">Sobre Nós</h2>
-      <p class="text-muted">A Realiza Tec é uma empresa dedicada a soluções inovadoras e tecnológicas. Com uma equipe experiente, criamos projetos que transformam o futuro em realidade, abrangendo desde desenvolvimento de sites até robótica e inteligência artificial.</p>
-      <img src="https://via.placeholder.com/800x400" class="img-fluid rounded" alt="Sobre Realiza Tec">
-    </div>
-  </section>
-
-  <!-- Serviços -->
-  <section id="servicos" class="py-5 bg-light">
-    <div class="container">
-      <h2 class="text-center mb-5">Nossos Serviços</h2>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card mb-4">
-            <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Desenvolvimento de Sites">
-            <div class="card-body">
-              <h5 class="card-title">Desenvolvimento de Sites</h5>
-              <p class="card-text">Criamos sites responsivos e otimizados para todas as plataformas.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4">
-            <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Criação de Jogos">
-            <div class="card-body">
-              <h5 class="card-title">Criação de Jogos</h5>
-              <p class="card-text">Desenvolvemos jogos interativos e imersivos para diversas plataformas.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4">
-            <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Automação">
-            <div class="card-body">
-              <h5 class="card-title">Automação</h5>
-              <p class="card-text">Projetos de automação para otimizar processos e aumentar a eficiência.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card mb-4">
-            <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Inteligência Artificial">
-            <div class="card-body">
-              <h5 class="card-title">Inteligência Artificial</h5>
-              <p class="card-text">Desenvolvemos modelos de IA para resolver problemas complexos.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4">
-            <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Robótica">
-            <div class="card-body">
-              <h5 class="card-title">Robótica</h5>
-              <p class="card-text">Prototipagem e desenvolvimento de soluções robóticas inovadoras.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <h2 class="display-4">A Empresa</h2   >
+      <p class="lead">A Realiza Tec é uma empresa dedicada a soluções inovadoras e tecnológicas.<br>Criamos projetos que transformam o futuro em realidade, abrangendo desde desenvolvimento de sites até robótica e Inteligência Artificial.</p>
     </div>
   </section>
 
@@ -116,9 +191,9 @@
   <section id="contato" class="py-5 text-center">
     <div class="container">
       <h2 class="mb-4">Fale Conosco</h2>
-      <p class="text-muted">Entre em contato para saber mais sobre nossos serviços e soluções personalizadas.</p>
-      <p><strong>Email:</strong> contato@realizatec.com.br</p>
-      <p><strong>Telefone:</strong> (XX) XXXXX-XXXX</p>
+      <p class="text-muted">Entre em contato para saber mais sobre nossos serviços e soluções personalizadas:</p>
+      <p><i class="fa-regular fa-envelope"></i> <strong>tec.realiza@gmail.com</strong></p>
+      <p><i class="fa-solid fa-phone"></i> <strong>+55 21 998275745</strong></p>
     </div>
   </section>
 
@@ -127,7 +202,7 @@
     <p class="mb-0">&copy; 2024 Realiza Tec. Todos os direitos reservados.</p>
   </footer>
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" defer></script>
+  
 </body>
 </html>
